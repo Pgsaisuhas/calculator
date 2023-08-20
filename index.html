@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+        <div class="container">
+            <form method="post" onsubmit="return false">
+                <table>
+                    <tr>
+                        <td colspan="4"><h1 id="calc">Calculator</h1></td> 
+                    </tr>
+                    <tr>
+                        <td colspan="4"><input type="text" name="display" id="display" placeholder="0.0"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" value="clear" onclick="clearDisplay()">C</button></td>
+                        <td><button type="button" value="/" id="operator" onclick="add(this.value)"><b>/</b></button></td>
+                        <td><button type="button" value="*" id="operator" onclick="add(this.value)"><b style="font-size:medium;">*</b></button></td>
+                        <td><button type="button" value="-" id="operator" onclick="add(this.value)"><b style="font-size:medium;">-</b></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" value="7" onclick="add(this.value)"><b>7</b></button></td>
+                        <td><button type="button" value="8" onclick="add(this.value)"><b>8</b></button></td>
+                        <td><button type="button" value="9" onclick="add(this.value)"><b>9</b></button></td>
+                        <td rowspan="2"><button type="button" value="+" id="operator" onclick="add(this.value)" >+</button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" value="4" onclick="add(this.value)"><b>4</b></button></td>
+                        <td><button type="button" value="5" onclick="add(this.value)"><b>5</b></button></td>
+                        <td><button type="button" value="6" onclick="add(this.value)"><b>6</b></button></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" value="1" onclick="add(this.value)"><b>1</b></button></td>
+                        <td><button type="button" value="2" onclick="add(this.value)"><b>2</b></button></td>
+                        <td><button type="button" value="3" onclick="add(this.value)"><b>3</b></button></td>
+                        <td rowspan="2"><button type="button" value="=" id="operator" onclick="calculate()" >=</button></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><button type="button" value="0" onclick="add(this.value)"><b>0</b></button></td>
+                        <td><button type="button" value="." onclick="add(this.value)"><b style="font-size:large;">.</b></button></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <script src="calculator.js" async></script>
+</body>
+</html>
